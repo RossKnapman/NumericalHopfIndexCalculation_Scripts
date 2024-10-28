@@ -1,0 +1,11 @@
+A=1.
+K=1.
+Ms=1.
+Lxy=10
+Nxy=64
+Nz=128
+Alpha=0.1
+OutputTimestep=0.05
+SimulationTime=10
+HopfIndexRegionLength=0.15
+HopfIndexRegionPosition=0.55

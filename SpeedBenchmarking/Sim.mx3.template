@@ -1,0 +1,13 @@
+N := {{ N }}
+L := 1.
+
+TableAdd({{ Method }})
+
+SetGridSize(N, N, N)
+SetCellSize(L/N, L/N, L/N)
+
+m = HopfionCompactSupport(0.25, 0.2)
+
+Print("Before", now().UnixNano())
+TableSave()  // Trigger Hopf index calculation
+Print("After", now().UnixNano())

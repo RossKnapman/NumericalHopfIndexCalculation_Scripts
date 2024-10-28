@@ -1,0 +1,69 @@
+///////////////////
+// Set Variables //
+///////////////////
+
+A              := {{ A }}               // Exchange stiffness (J/m)
+K              := {{ K }}               // Uniaxial anisotropy strength (J/m^3)
+Ms             := {{ Ms }}              // Saturation magnetisation (A/m)
+Lxy            := {{ Lxy }}             // Dimensionless length of the system in the x and y direction
+Nxy            := {{ Nxy }}
+Nz             := {{ Nz }}
+OutputTimestep := {{ OutputTimestep }}  // How frequently to output data, in dimensionless time
+SimulationTime := {{ SimulationTime }}  // How long to run the simulation, in dimensionless time
+
+
+///////////////////////
+// Set Scaling Units //
+///////////////////////
+
+LengthUnit         := sqrt(A / K)
+TimeUnit           := Ms / (GammaLL * K)
+
+
+////////////////
+// Energetics //
+////////////////
+
+Msat        = Ms
+Aex         = A
+Ku1         = K
+anisU       = Vector(0, 0, 1)
+Alpha       = {{ Alpha }}
+EnableDemag = False
+
+
+//////////////
+// Geometry //
+//////////////
+
+Discretisation := Lxy / Nxy
+Delta          := Discretisation * LengthUnit
+SetGridSize(Nxy, Nxy, Nz)
+SetCellSize(Delta, Delta, Delta)
+
+
+/////////////////////////////////
+// Magnetisation Configuration //
+/////////////////////////////////
+
+m = HopfionCompactSupport(2.5, 2.5).Transl(0, 0, -0.25*Nz*Delta)
+
+
+////////////////////
+// Autosave Setup //
+////////////////////
+
+AutoSaveInterval := OutputTimestep * TimeUnit
+AutoSave(m, AutoSaveInterval)
+AutoSave(ext_hopfindexdensity_solidangle, AutoSaveInterval)
+AutoSave(ext_hopfindexdensity_twopointstencil, AutoSaveInterval)
+AutoSave(ext_hopfindexdensity_fivepointstencil, AutoSaveInterval)
+AutoSave(ext_emergentmagneticfield_solidangle, AutoSaveInterval)
+TableAutoSave(AutoSaveInterval)
+
+////////////////////
+// Run Simulation //
+////////////////////
+
+Print(SimulationTime*TimeUnit)
+Run(SimulationTime*TimeUnit)

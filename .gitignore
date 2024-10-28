@@ -1,0 +1,22 @@
+# Micromagnetic Data
+**/Data/
+**/*.out/
+*.vts
+*.vtk
+*.ovf
+
+# Figures
+*.pdf
+*.png
+*.mp4
+
+# Editor Config
+.vscode/
+
+# Python-Specific
+__pycache__/
+.ipynb_checkpoints
+*.pkl
+
+# macOS Index Files
+*DS_Store

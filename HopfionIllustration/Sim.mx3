@@ -1,0 +1,14 @@
+L := 1.  // System side length
+N := 100  // Number of discretisation cells in each direction
+
+SetGridSize(N, N, N)
+SetCellSize(L/N, L/N, L/N)
+
+m = HopfionCompactSupport(0.25, 0.2)
+SaveAs(m, "Hopfion.ovf")
+
+SaveAs(ext_hopfindexdensity_twopointstencil, "HopfIndexDensity_TwoPointStencil.ovf")
+SaveAs(ext_hopfindexdensity_fivepointstencil, "HopfIndexDensity_FivePointStencil.ovf")
+SaveAs(ext_hopfindexdensity_solidangle, "HopfIndexDensity_SolidAngle.ovf")
+
+SaveAs(ext_emergentmagneticfield_solidangle, "EmergentField.ovf")

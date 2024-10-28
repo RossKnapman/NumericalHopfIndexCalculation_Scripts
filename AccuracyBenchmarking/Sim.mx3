@@ -1,0 +1,16 @@
+L := 1.  // System side length
+N := 10  // Number of discretisation cells in each direction
+
+TableAddVar(N, "N", "")
+TableAdd(ext_hopfindex_fivepointstencil)
+TableAdd(ext_hopfindex_twopointstencil)
+TableAdd(ext_hopfindex_solidangle)
+TableAdd(ext_hopfindex_solidanglefourier)
+
+for N = 20; N <= 100;  N += 5 {
+
+    SetGridSize(N, N, N)
+    SetCellSize(L/N, L/N, L/N)
+    m = HopfionCompactSupport(0.25, 0.2)
+    TableSave()
+}

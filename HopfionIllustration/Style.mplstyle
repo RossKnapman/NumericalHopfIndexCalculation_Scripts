@@ -1,0 +1,3 @@
+text.usetex: True
+font.size: 22
+text.latex.preamble : \usepackage{amsmath}
