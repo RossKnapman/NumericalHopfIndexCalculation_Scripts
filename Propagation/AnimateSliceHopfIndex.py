@@ -187,6 +187,7 @@ fourier_plot, = ax.plot(times[0], hopf_indices_fourier[0], animated=True, label=
 
 ax.set_ylim(0.9*np.min(hopf_indices_solidangle), 1.1*np.max(hopf_indices_solidangle))
 ax.set_xlim(0, np.max(times))
+ax.set_xlabel(r'$t$')
 ax.set_ylabel(r'$H$')
 ax.legend(loc='upper left')
 
