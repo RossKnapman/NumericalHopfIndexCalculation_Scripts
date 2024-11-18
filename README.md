@@ -10,9 +10,9 @@ Ross Knapman<sup>1</sup>, Maria Azhar<sup>1</sup>, Alessandro Pignedoli<sup>1</s
 | --- | --- |
 | Paper | Pending |
 | Paper DOI | Pending |
-| Preprint | Pending |
+| Preprint | [![arXiv](https://img.shields.io/badge/arXiv-2410.22058-blue.svg)](https://arxiv.org/abs/2410.22058) |
 | License | [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) |
-| Repository DOI | Pending |
+| Repository DOI | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14003271.svg)](https://doi.org/10.5281/zenodo.14003271) |
 
 
 ## About
