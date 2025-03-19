@@ -1,4 +1,4 @@
-# Spacetime magnetic hopfions: from internal excitations and braiding of skyrmions
+# Numerical Calculation of the Hopf Index for 3D Magnetic Textures
 
 Ross Knapman<sup>1</sup>, Maria Azhar<sup>1</sup>, Alessandro Pignedoli<sup>1</sup>, Louis Gallard<sup>2</sup>, Riccardo Hertel<sup>2</sup>, Jonathan Leliaert<sup>3</sup>, and Karin Everschor-Sitte<sup>1</sup>
 
